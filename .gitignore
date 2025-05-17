@@ -1,7 +1,7 @@
 # Ignorar arquivos binários gerados ao compilar os códigos
-nivelnovato
-nivelaventureiro
-nivelmestre
+logica_nivelnovato
+logica_nivelaventureiro
+logica_nivelmestre
 
 # Ignorar outros executáveis possíveis
 *.exe

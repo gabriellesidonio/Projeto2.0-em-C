@@ -1,0 +1,8 @@
+# Ignorar arquivos binários gerados ao compilar os códigos
+nivelnovato
+nivelaventureiro
+nivelmestre
+
+# Ignorar outros executáveis possíveis
+*.exe
+*.out

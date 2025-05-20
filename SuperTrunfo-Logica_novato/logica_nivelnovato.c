@@ -4,12 +4,12 @@ int main() {
     // === Cadastro das duas cidades ===
 
     // --- Variáveis da Carta 1 ---
-    char estado1;              // Armazena a letra que representa o estado (ex: 'S' para São Paulo)
-    char codigo1[6];           // Código identificador da carta (até 5 caracteres + '\0' do final da string)
-    char nome1[85];            // Nome da cidade (até 84 caracteres + '\0')
-    int populacao1;            // População total da cidade
-    float area1, pib1;         // Área territorial (em km²) e PIB (em bilhões)
-    int pontos1;               // Número de pontos turísticos
+    char estado1;
+    char codigo1[6];
+    char nome1[85];
+    int populacao1;
+    float area1, pib1;
+    int pontos1;
 
     // --- Variáveis da Carta 2 ---
     char estado2;
@@ -24,14 +24,14 @@ int main() {
 
     printf("Estado (letra): ");
     scanf(" %c", &estado1);
-    getchar(); // Limpa o buffer para evitar pular a próxima leitura
+    getchar();
 
     printf("Codigo da carta: ");
     scanf("%5s", codigo1);
     getchar();
 
     printf("Nome da cidade: ");
-    scanf("%[^\n]", nome1); // Lê a linha toda, permitindo espaços no nome
+    scanf("%[^\n]", nome1);
     getchar();
 
     printf("Populacao: ");
@@ -74,25 +74,25 @@ int main() {
     scanf("%d", &pontos2);
 
     // === Cálculo da densidade populacional ===
-    float densidade1 = populacao1 / area1; // habitantes por km²
+    float densidade1 = populacao1 / area1;
     float densidade2 = populacao2 / area2;
 
-    // === Cálculo do PIB per capita (convertendo bilhões para reais) ===
+    // === Cálculo do PIB per capita ===
     float pibPerCapita1 = (pib1 * 1e9) / populacao1;
     float pibPerCapita2 = (pib2 * 1e9) / populacao2;
 
-    // === Comparação fixa por PIB (atributo definido no desafio) ===
+    // === Comparação fixa por PIB ===
     printf("\n=== Comparação: PIB ===\n");
+    printf("%s (Estado: %c) - PIB: R$ %.2f bilhões\n", nome1, estado1, pib1);
+    printf("%s (Estado: %c) - PIB: R$ %.2f bilhões\n", nome2, estado2, pib2);
 
     if (pib1 > pib2) {
-        printf("%s venceu com o maior PIB.\n", nome1);
+        printf("Resultado: %s venceu com o maior PIB.\n", nome1);
     } else if (pib2 > pib1) {
-        printf("%s venceu com o maior PIB.\n", nome2);
+        printf("Resultado: %s venceu com o maior PIB.\n", nome2);
     } else {
-        printf("Empate no PIB entre %s e %s.\n", nome1, nome2);
+        printf("Resultado: Empate no PIB entre %s e %s.\n", nome1, nome2);
     }
 
-    return 0; // Fim do programa
+    return 0;
 }
-
-
